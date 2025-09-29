@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://de1j7rjvv024o"]
+[gd_scene load_steps=23 format=3 uid="uid://de1j7rjvv024o"]
 
 [ext_resource type="Script" uid="uid://bcts7agxrne5d" path="res://Scripts/platform_spawner.gd" id="1_kry3j"]
 [ext_resource type="Script" uid="uid://c8inat4tls4sn" path="res://Scripts/Platform.gd" id="2_kry3j"]
@@ -6,6 +6,9 @@
 [ext_resource type="Material" uid="uid://ct4kxal823ctc" path="res://Assets/Materials/magenta.tres" id="4_6bp64"]
 [ext_resource type="Material" uid="uid://ba7nw3o3thqtm" path="res://Assets/Materials/blue.tres" id="5_344ge"]
 [ext_resource type="PackedScene" uid="uid://bl0jowmtdgqq1" path="res://Scenes/player.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://c18wlj68c8r2m" path="res://Scenes/platform_short.tscn" id="6_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://c1x4ciinvns2h" path="res://Scenes/platform_medium.tscn" id="7_hptm8"]
+[ext_resource type="PackedScene" uid="uid://yjo11k05hgix" path="res://Scenes/platform_long.tscn" id="8_d1ilt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_21xkr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -94,7 +97,7 @@ shadow_enabled = true
 [node name="PlatformSpawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 65.8212)
 script = ExtResource("1_kry3j")
-platforms = Array[PackedScene]([SubResource("PackedScene_ynf5e"), SubResource("PackedScene_hptm8"), SubResource("PackedScene_6iyac")])
+platforms = Array[PackedScene]([SubResource("PackedScene_ynf5e"), SubResource("PackedScene_hptm8"), SubResource("PackedScene_6iyac"), ExtResource("6_ynf5e"), ExtResource("7_hptm8"), ExtResource("8_d1ilt")])
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, -8.27662e-08, -1.89685e-09, 8.0437e-08, 0.965926, 0.258819, -1.95893e-08, -0.258819, 0.965926, 0, 3, 4)

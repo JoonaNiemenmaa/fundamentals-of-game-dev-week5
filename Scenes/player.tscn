@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bl0jowmtdgqq1"]
 
-[ext_resource type="Script" uid="uid://jl4sir176qln" path="res://Scenes/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://jl4sir176qln" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="ArrayMesh" uid="uid://bmudki03bh3jx" path="res://Assets/Models/spaceship.obj" id="1_v0iea"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cvnsp"]
