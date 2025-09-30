@@ -23,6 +23,7 @@ func save_highscore(highscore: int):
 	file.store_string(str(highscore))
 
 func _process(delta: float) -> void:
+	print(score)
 	if player:
 		if player.position.y > -20:
 			$Score.text = "Score: %s" % int(score)
