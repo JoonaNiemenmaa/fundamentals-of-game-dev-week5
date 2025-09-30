@@ -10,9 +10,10 @@ var x = 0
 func _physics_process(delta: float) -> void:
 	x = Input.get_axis("left", "right") * MOVE_SPEED
 	
+	
 	if (Input.is_action_just_pressed("jump") and is_on_floor()):
 		y = JUMP_HEIGHT
-	else:
+	elif (not is_on_floor()):
 		y += get_gravity().y * delta
 	velocity = Vector3(x, y, 0)
 	move_and_slide()

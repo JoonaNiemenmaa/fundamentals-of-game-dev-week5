@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://de1j7rjvv024o"]
+[gd_scene load_steps=24 format=3 uid="uid://de1j7rjvv024o"]
 
 [ext_resource type="Script" uid="uid://bcts7agxrne5d" path="res://Scripts/platform_spawner.gd" id="1_kry3j"]
 [ext_resource type="Script" uid="uid://c8inat4tls4sn" path="res://Scripts/Platform.gd" id="2_kry3j"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c18wlj68c8r2m" path="res://Scenes/platform_short.tscn" id="6_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://c1x4ciinvns2h" path="res://Scenes/platform_medium.tscn" id="7_hptm8"]
 [ext_resource type="PackedScene" uid="uid://yjo11k05hgix" path="res://Scenes/platform_long.tscn" id="8_d1ilt"]
+[ext_resource type="Script" uid="uid://ca4cwwc6s8bkn" path="res://Scenes/score.gd" id="9_hptm8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_21xkr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -110,6 +111,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("9_hptm8")
+
+[node name="Score" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.5
+offset_right = 30.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Score: 0"
+
+[node name="HighScore" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Player" parent="." instance=ExtResource("6_21xkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3071354, 0)
