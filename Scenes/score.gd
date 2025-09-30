@@ -24,9 +24,10 @@ func save_highscore(highscore: int):
 
 func _process(delta: float) -> void:
 	if player:
-		if player.position.y >= -20:
+		if player.position.y > -20:
 			$Score.text = "Score: %s" % int(score)
 			score += delta
 		else:
+			print(score)
 			$HighScore.text = "Highscore: %s" % int(score)
 			save_highscore(int(score))
